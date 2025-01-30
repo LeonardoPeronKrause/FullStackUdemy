@@ -1,7 +1,7 @@
 # FullStackUdemy
 Curso FullStack com NodeJs, ReactJS e React Native
 
-// setInterval
+**setInterval**
 
 function acao() {
     document.write('Executando...<br/>');
@@ -13,14 +13,14 @@ var timer = setInterval(() => {
 }, 1000);
 
 
-// setTimeOut
+**setTimeOut**
 
 setTimeout(() => {
     console.log('executou');
 }, 3000);
 
 
-// Objetos
+**Objetos**
 
 let pessoa = {
     nome: 'Leonardo',
@@ -42,3 +42,38 @@ let usuarios = [
 ];
 
 console.log(usuarios);
+
+**Desconstruindo Arrays**
+
+let pessoa = {
+    nome: 'Leonardo',
+    sobrenome: 'Peron Krause',
+    empresa: 'PK Tech',
+    cargo: 'Programador FullSatck'
+};
+
+//console.log(pessoa.nome);
+//console.log(pessoa.cargo);
+
+let nome = 'teste'
+
+const {nome: nomePesoa, cargo, empresa, sobrenome} = pessoa;
+
+console.log(nomePesoa);
+console.log(cargo);
+console.log(sobrenome);
+console.log(empresa);
+
+
+//==================================================================
+
+**Desconstruir um Array**
+
+let nomes = ['Leonardo', 'Pedro', 'Eduardo'];
+
+let { 0:leonardo, 1:terceirapessoa} = nomes;
+console.log(leonardo, terceirapessoa);
+
+let [primeironome, segundonome] = nomes;
+
+console.log(primeironome, segundonome);
