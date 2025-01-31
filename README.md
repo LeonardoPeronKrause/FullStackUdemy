@@ -130,3 +130,87 @@ function sorteador(...numeros) {
 }
 
 sorteador(1, 2, 3 , 4, 5, 22);
+
+**MAP = PERCORRER TODO UM ARRAY**
+
+let lista = ['Leonardo', 'Pedro', 'Elisa', 'Julia'];
+
+lista.map((item, index) => {
+    console.log(`Passando ${item} - na posição ${index}`);
+})
+
+**REDUCE = BUSCA REDUZIR UM ARRAY**
+
+let numeros = [5, 3, 2, 5];
+
+let total = numeros.reduce((acumulador, numero, indice, original) => {
+    console.log(`${acumulador} - total até o momento`);
+    console.log(`${numero} - valor atual`);
+    console.log(`${indice} - indice atual`);
+    console.log(`${original} - array original`);
+    console.log('===============================')
+
+    return acumulador += numero;
+})
+console.log(`Total do reduce ${total}`)
+
+**FIND**
+
+let listagem = [5, 3, 'Leo', 2, 'Pedro'];
+
+let busca = listagem.find((item) => {
+    if (item === 'Leo') {
+        return console.log('Item encontrado');
+    }
+})
+
+console.log(busca);
+
+**FILTER**
+
+let palavras = ['Matheus', 'Jose', 'Joao', 'Leo', 'Pedro'];
+
+let resultado = palavras.filter((item) => {
+    return item.length <= 4;
+})
+
+console.log(resultado);
+
+**Funções Anônimas**
+
+function somar(a, b) {
+    let tot = a + b;
+    return console.log(tot)
+}
+
+somar(250, 356);
+
+let subtrair = (v1, v2) => {
+    let total= v1 - v2;
+    console.log(total);
+}
+
+subtrair(100, 60);
+
+let numeros = [1, 3, 5, 10];
+
+numeros.map((item)=> {
+    console.log(item)
+})
+
+**includes, startsWith, endsWith**
+
+let nomes=['leo', 'pedro', 'joao'];
+
+console.log(nomes.includes('lucas'))
+
+if (nomes.includes('pedro')) {
+    console.log('Está na lista')
+} else {
+    console.log('Nao esta na lista')
+}
+
+let nome = 'mateus';
+console.log(nome.startsWith('m'));
+
+console.log(nome.endsWith('s'));
