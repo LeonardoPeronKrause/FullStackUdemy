@@ -1,34 +1,18 @@
-// Spreed Operators
-/*
-let primeiros = [1, 2, 3];
+// Rest Operator
 
-let numeros = [...primeiros, 4, 5, 10];
-console.log(numeros);
-
-let pessoa = {
-    nome: 'Leoanrdo',
-    idade: 22,
-    cargo: 'Programador'
+function convidados(...nomes) {
+    console.log('SEJAM BEM VINDO CONVIDADOS');
+    console.log(nomes);
 }
 
-let novaPessoa = {
-    ...pessoa,
-    status: 'ATIVO',
-    cidade: 'Fpolis/SC',
-    telefone: 987654321
-}
-console.log(novaPessoa)
-*/
+convidados('Leonardo', 'Pedro', 'Elisa', 'Julia');
 
-function novoUsuario(info) {
-    let dados = {
-        ...info,
-        status: 'ATIVO',
-        inicio: '20/03/2023',
-        codigo: '12345'
-    };
 
-    console.log(dados);
+function sorteador(...numeros) {
+    console.log(numeros);
+
+    const numeroGerado = Math.floor(Math.random() * numeros.length);
+    console.log('Número gerado foi: ' + numeros[numeroGerado]);
 }
 
-novoUsuario({ nome: 'Leonardo', cargo: 'DEV'})
+sorteador(1, 2, 3 , 4, 5, 22);
